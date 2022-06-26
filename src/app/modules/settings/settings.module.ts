@@ -5,7 +5,12 @@ import { ThemeColorComponent } from './theme-color/theme-color.component';
 import { BackgroundChoiceComponent } from './background-choice/background-choice.component';
 
 @NgModule({
-  declarations: [SettingsPageComponent, ThemeColorComponent, BackgroundChoiceComponent],
+  declarations: [
+    SettingsPageComponent,
+    ThemeColorComponent,
+    BackgroundChoiceComponent,
+  ],
+  exports: [SettingsPageComponent],
   imports: [CommonModule],
 })
 export class SettingsModule {}

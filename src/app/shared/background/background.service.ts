@@ -7,6 +7,10 @@ export class BackgroundService {
 
   private currentBackground: BackgroundType = this.backgrounds[0];
 
+  getBackgrounds() {
+    return this.backgrounds;
+  }
+
   getCurrentBackground() {
     return this.currentBackground;
   }

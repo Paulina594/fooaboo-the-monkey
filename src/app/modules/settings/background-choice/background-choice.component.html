@@ -1,1 +1,6 @@
-<p>background-choice works!</p>
+<div class="bg-section">
+  <div>Background:</div>
+  <div class="bg-card">
+    <img *ngFor="let image of items" [attr.src]="image.img" [attr.alt]="image.alt">
+  </div>
+</div>
