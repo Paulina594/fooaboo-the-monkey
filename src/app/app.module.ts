@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './modules/home/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeModule } from './modules/home/home.module';
+import { LayoutModule } from './modules/layout/layout.module';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    LayoutModule,
     SharedModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
