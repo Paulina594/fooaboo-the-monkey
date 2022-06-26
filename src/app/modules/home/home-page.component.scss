@@ -1,0 +1,114 @@
+:host {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 380px);
+
+  @media screen and (max-width: 1200px) {
+    height: fit-content;
+  }
+
+  .home-wrapper {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .monkey {
+      display: flex;
+      align-items: flex-end;
+      width: 50%;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        padding-bottom: 50px;
+      }
+
+      img {
+        position: relative;
+        padding-top: 10%;
+        margin: 0 auto;
+        width: 60%;
+
+      }
+    }
+
+    .speak-cloud {
+      display: flex;
+      align-items: flex-start;
+      margin-right: 30px;
+
+      @media screen and (max-width: 1200px) {
+        margin: 30px auto;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.cloud {
+  position: relative;
+  background: #ffffff;
+  border-radius: .4em;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 36px solid transparent;
+    border-right-color: #ffffff;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -18px;
+    margin-left: -36px;
+
+    @media screen and (max-width: 1200px) {
+      left: 50%;
+      top: 100%;
+      border-top-color: #fff;
+      border-bottom: 0;
+      border-left: 0;
+      margin-left: -18px;
+      margin-bottom: -36px;
+      border-right-color: transparent;
+      margin-top: 0;
+      z-index: 10;
+    }
+  }
+}
+
+.text {
+  line-height: 30px;
+  padding: 50px;
+  font-size: 30px;
+
+  @media screen and (max-width: 565px) {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .offers {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    padding-top: 20px;
+    color: var(--theme-color);
+    text-align: center;
+
+    .offer {
+      padding-bottom: 15px;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(110%);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --theme-color: hotpink;
+  --font-color: #3a3535;
+}
+
+.app-root {
+  display: block;
+  width: 100%;
+  font-family: 'Acme', sans-serif;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-wrapper {
+  width: 100%;
+
+  .app-content {
+    min-height: calc(100vh - 230px - 160px);
+  }
+}
